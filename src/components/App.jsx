@@ -22,7 +22,7 @@ export default function App() {
   const addContact = ({ name, number }) => {
     const Name = name.toLowerCase();
 
-    const findName = this.state.contacts
+    const findName = contacts
       .map(contact => contact.name.toLowerCase())
       .includes(Name);
 
