@@ -20,10 +20,14 @@ export default function App() {
   const [filter, setFilter] = useState('');
 
   const addContact = ({ name, number }) => {
-    const findName = contacts.map(contact => contact.name).includes(name);
+    const Name = name.toLowerCase();
+
+    const findName = this.state.contacts
+      .map(contact => contact.name.toLowerCase())
+      .includes(Name);
 
     if (findName) {
-      alert(`${name} is already in contacts`);
+      alert(`${Name} is already in contacts`);
       return;
     }
 
